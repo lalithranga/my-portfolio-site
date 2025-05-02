@@ -10,17 +10,19 @@ function App() {
         autoPlay
         loop
         muted
+        opecity="0.9"
+      
       >
         <source src="/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
      
-      <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-30 -z-10"></div>
+      <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-55 -z-10"></div>
 
       {/* Main App with Routing */}
       <BrowserRouter>
-        <div className="relative min-h-screen p-3 text-white">
+        <div className="relative min-h-screen text-white">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<h1 className="text-2xl">About</h1>} />
