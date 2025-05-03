@@ -65,9 +65,9 @@ export default function ScatterText() {
     return (
         <div
             ref={containerRef}
-            className="flex justify-center items-center w-full max-w-md text-left text-white mx-auto px-4 py-10"
+            className="flex justify-center items-center w-full max-w-md text-left text-green-400 font-bold mx-auto px-4 py-10"
         >
-            <h1 className="scatter-heading text-2xl font-semibold">
+            <h1 className="scatter-heading text-[25px] lg:text-[50px]   font-semibold text-center">
                 Hi there! I'm Loving coding....Contact me
             </h1>
         </div>

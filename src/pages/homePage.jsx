@@ -13,6 +13,9 @@ import Footer from "../component/footer";
 import Skill from "../component/skill";
 import ContactMe from "../component/contect";
 import ScatterText from "../component/playing";
+import "@fontsource/roboto"; // Imports default weight (400)
+
+
 
 function HomePage() {
   const talents = ["Software Developer", "Web Developer"];
@@ -49,13 +52,13 @@ function HomePage() {
 
       {/* Top Section */}
       <div className="flex flex-col items-center">
-        <h1 className="text-[26px] font-bold text-gray-500">Hello, it's me</h1>
-        <p className="text-[30px] mb-2 font-extrabold font-serif">
+        <h1 className="text-[26px] font-bold text-gray-500 lg:text-[50px] my-6 ">Hello, it's me</h1>
+        <p className="text-[30px] lg:text-[40px] mb-2 font-extrabold font-roboto text-gray-200">
           Lalith Wijesiri
         </p>
 
         <div className="flex flex-row items-center justify-center w-full mx-auto">
-          <p className="text-[20px] ml-9 w-[80px]">And I'm</p>
+          <p className="text-[20px] lg:text-[30px] ml-9 w-[80px] lg:w-[100px]">And I'm</p>
 
           <AnimatePresence mode="wait">
             <motion.p
@@ -64,7 +67,7 @@ function HomePage() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="text-[30px] font-semibold ml-6 text-green-600 w-[300px]"
+              className="text-[30px] lg:text-[40px] font-semibold ml-6 text-green-600 w-[400px]"
             >
               {talents[currentTalentIndex].split("").map((char, i) => (
                 <motion.span key={i} variants={letterVariants}>
@@ -77,7 +80,7 @@ function HomePage() {
       </div>
 
       {/* Description */}
-      <div className="flex flex-col items-center mb-9">
+      <div className="flex flex-col items-center mb-9 py-5">
         <div className="flex items-center justify-center py-3">
           <div className="w-full flex flex-col text-gray-400">
             {[
@@ -91,7 +94,7 @@ function HomePage() {
                 key={idx}
                 className="flex items-center justify-center text-justify"
               >
-                <p className="text-[18px] font-semibold">{text}</p>
+                <p className="text-[18px] lg:text-[23px] font-semibold">{text}</p>
               </div>
             ))}
           </div>
@@ -100,7 +103,7 @@ function HomePage() {
 
       {/* Social Links */}
       <section className="flex w-full justify-center items-center mb-6">
-        <div className="flex flex-row justify-evenly w-[400px]">
+        <div className="flex flex-row justify-evenly w-[400px] lg:w-[600px]">
           {[
             {
               href: "https://www.facebook.com/lalith.wijesiri.1",
@@ -144,7 +147,7 @@ function HomePage() {
       </section>
 
       {/* Profile Image */}
-      <section className="flex flex-row w-full mb-6 mt-[50px] justify-center items-center">
+      <section className="flex flex-row w-full mb-6 mt-[50px] justify-center items-center lg:mt-[150px]">
         <motion.img
           src="/profile.jpg"
           alt="Profile"
@@ -188,10 +191,10 @@ function HomePage() {
     
     {/* Text content */}
     <div className="w-full max-w-xl text-[15px] text-justify mt-5 lg:mt-0">
-      <h2 className="text-2xl font-bold mb-4  text-gray-200 w-fit px-4 py-1 rounded-md mx-auto">
+      <h2 className="text-2xl lg:text-3xl font-bold mb-8  text-gray-200 w-fit px-4 py-1 rounded-md mx-auto ">
         My Skills
       </h2 >
-      <h3 className="text-gray-200 text-[18px] font-semibold mb-4">
+      <h3 className="text-gray-200 text-[18px] lg:text-[21px] font-semibold mb-4">
       As a Full Stack Developer, I specialize in building high-performance, scalable web applications using modern JavaScript technologies and Java. My front-end expertise lies in creating dynamic and responsive user interfaces with React, while on the back end, I work extensively with Node.js and Spring Boot to develop robust APIs and server-side logic. I am proficient in both MongoDB and MySQL, ensuring efficient data management for a wide range of applications.
 
 Through my recent training in the Digital Technology Product Solution (NZQA Level 5) program at Mission Ready Institute, I have deepened my understanding of agile methodologies, cloud-based architectures, and end-to-end product development. I take a performance-focused, adaptable, and collaborative approach to every project, making me a valuable asset for both front-end and back-end development roles.
@@ -210,12 +213,13 @@ Through my recent training in the Digital Technology Product Solution (NZQA Leve
       <div className="flex flex-col lg:flex-row w-full justify-evenly mx-auto my-[70px]">
   {/* Left section: ContactMe */}
   <div className="w-full lg:w-1/2 flex justify-center">
-    <ContactMe />
+ 
+    <ScatterText />
   </div>
 
   {/* Right section: ScatterText */}
   <div className="w-full lg:w-1/2 max-w-xl text-[15px] text-justify mt-5 lg:mt-0">
-    <ScatterText />
+  <ContactMe />
   </div>
 </div>
 

@@ -18,6 +18,9 @@ export default {
           '50%': { opacity: '1', transform: 'scale(1.1)' },
         },
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      }
     },
   },
   plugins: [],

@@ -103,7 +103,7 @@ function Skill() {
           initial="hidden"
           animate={headerControls}
         >
-          <h1 className="text-2xl font-bold text-gray-200">My Tech Toolbox</h1>
+          <h1 className="text-2xl lg:text-3xl font-bold text-gray-200 ">My Tech Toolbox</h1>
         </motion.div>
 
         {/* Frontend Section */}
@@ -114,7 +114,7 @@ function Skill() {
           initial="hidden"
           animate={frontendControls}
         >
-          <motion.h2 variants={titleVariants} className="text-lg font-semibold text-gray-200 mb-4">Frontend</motion.h2>
+          <motion.h2 variants={titleVariants} className="text-lg lg:text-xl font-semibold text-gray-200 mb-4 ">Frontend</motion.h2>
           <div className="flex flex-wrap gap-3">
             <motion.img variants={itemVariants} src="/Js.svg" alt="JavaScript" title="JavaScript" className={iconStyle} />
             <motion.img variants={itemVariants} src="/typeScript.svg" alt="TypeScript" title="TypeScript" className={iconStyle} />
@@ -133,7 +133,7 @@ function Skill() {
           initial="hidden"
           animate={backendControls}
         >
-          <motion.h2 variants={titleVariants} className="text-lg font-semibold text-gray-200 mb-4">Backend</motion.h2>
+          <motion.h2 variants={titleVariants} className="text-lg lg:text-xl font-semibold text-gray-200 mb-4">Backend</motion.h2>
           <div className="flex flex-wrap gap-3">
             <motion.img variants={itemVariants} src="/nodejs.svg" alt="Node.js" title="Node.js" className={iconStyle} />
             <motion.img variants={itemVariants} src="/springboot.svg" alt="Spring" title="Spring" className={iconStyle} />
@@ -149,7 +149,7 @@ function Skill() {
           initial="hidden"
           animate={databaseControls}
         >
-          <motion.h2 variants={titleVariants} className="text-lg font-semibold text-gray-200 mb-4">Database</motion.h2>
+          <motion.h2 variants={titleVariants} className="text-lg lg:text-xl font-semibold text-gray-200 mb-4">Database</motion.h2>
           <div className="flex flex-wrap gap-3">
             <motion.img variants={itemVariants} src="/mysql.svg" alt="MySQL" title="MySQL" className={iconStyle} />
             <motion.img variants={itemVariants} src="/mongodb.svg" alt="MongoDB" title="MongoDB" className={iconStyle} />
@@ -164,7 +164,7 @@ function Skill() {
           initial="hidden"
           animate={cloudControls}
         >
-          <motion.h2 variants={titleVariants} className="text-lg font-semibold text-gray-200 mb-4">Cloud & DevOps</motion.h2>
+          <motion.h2 variants={titleVariants} className="text-lg lg:text-xl font-semibold text-gray-200 mb-4">Cloud & DevOps</motion.h2>
           <div className="flex flex-wrap gap-3">
             <motion.img variants={itemVariants} src="/Docker.svg" alt="Docker" title="Docker" className={iconStyle} />
             <motion.img variants={itemVariants} src="/azure.svg" alt="Azure" title="Azure" className={iconStyle} />
@@ -179,7 +179,7 @@ function Skill() {
           initial="hidden"
           animate={toolsControls}
         >
-          <motion.h2 variants={titleVariants} className="text-lg font-semibold text-gray-200 mb-4">Tools</motion.h2>
+          <motion.h2 variants={titleVariants} className="text-lg lg:text-xl font-semibold text-gray-200 mb-4">Tools</motion.h2>
           <div className="flex flex-wrap gap-3">
             <motion.img variants={itemVariants} src="/postman.svg" alt="Postman" title="Postman" className={iconStyle} />
             <motion.img variants={itemVariants} src="/git.svg" alt="Git" title="Git" className={iconStyle} />
@@ -195,12 +195,7 @@ function Skill() {
           initial="hidden"
           animate={profileControls}
         >
-          <div className="bg-gray-700 text-white px-3 py-1 rounded-l-md text-sm">
-            Profile views
-          </div>
-          <div className="bg-blue-500 text-white px-3 py-1 rounded-r-md text-sm">
-            73
-          </div>
+         
         </motion.div>
       </div>
     </div>
