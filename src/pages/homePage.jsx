@@ -1,9 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { TiSocialFacebook, TiSocialInstagram, TiSocialGithub, TiSocialLinkedin } from "react-icons/ti";
+import {
+  TiSocialFacebook,
+  TiSocialInstagram,
+  TiSocialGithub,
+  TiSocialLinkedin,
+} from "react-icons/ti";
 import Header from "../component/header";
 import Project from "./projectPage";
+
+import Footer from "../component/footer";
+import Skill from "../component/skill";
 import ContactMe from "../component/contect";
+import ScatterText from "../component/playing";
 
 function HomePage() {
   const talents = ["Software Developer", "Web Developer"];
@@ -35,13 +44,15 @@ function HomePage() {
   return (
     <div className="w-full">
       {/* Header with scroll handler */}
-      
+
       <Header onProjectClick={scrollToProjects} />
 
       {/* Top Section */}
       <div className="flex flex-col items-center">
         <h1 className="text-[26px] font-bold text-gray-500">Hello, it's me</h1>
-        <p className="text-[30px] mb-2 font-extrabold font-serif">Lalith Wijesiri</p>
+        <p className="text-[30px] mb-2 font-extrabold font-serif">
+          Lalith Wijesiri
+        </p>
 
         <div className="flex flex-row items-center justify-center w-full mx-auto">
           <p className="text-[20px] ml-9 w-[80px]">And I'm</p>
@@ -76,7 +87,10 @@ function HomePage() {
               "I focus on detail and believe",
               "I’m always learning new",
             ].map((text, idx) => (
-              <div key={idx} className="flex items-center justify-center text-justify">
+              <div
+                key={idx}
+                className="flex items-center justify-center text-justify"
+              >
                 <p className="text-[18px] font-semibold">{text}</p>
               </div>
             ))}
@@ -121,7 +135,7 @@ function HomePage() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay }}
-              className={`border-2 border-green-900 rounded-full p-1 text-[30px] text-gray-200 mx-2 ${hover}`}
+              className={`border-4 border-green-900 rounded-full p-1 text-[30px] text-gray-200 mx-2 ${hover}`}
             >
               {icon}
             </motion.a>
@@ -149,16 +163,66 @@ function HomePage() {
       </section>
 
       {/* Project Section */}
-      <div ref={projectRef}>
-        <Project />
-      </div>
+    {/* Project Section */}
+<section className="flex items-center justify-center px-4 py-[100px]">
+  <div
+    ref={projectRef}
+    className="flex flex-col lg:flex-row items-center justify-center gap-10 max-w-6xl w-full"
+  >
+
+      <Project />
+    
+  </div>
+</section>
+
+
+     {/* skills */}
+
+     <section className="flex items-center justify-center px-4">
+  <div className="flex flex-col lg:flex-row gap-10 max-w-6xl w-full">
+    
+    {/* Skill component */}
+    <div className="w-full max-w-xl">
+      <Skill />
+    </div>
+    
+    {/* Text content */}
+    <div className="w-full max-w-xl text-[15px] text-justify mt-5 lg:mt-0">
+      <h2 className="text-2xl font-bold mb-4  text-gray-200 w-fit px-4 py-1 rounded-md mx-auto">
+        My Skills
+      </h2 >
+      <h3 className="text-gray-200 text-[18px] font-semibold mb-4">
+      As a Full Stack Developer, I specialize in building high-performance, scalable web applications using modern JavaScript technologies and Java. My front-end expertise lies in creating dynamic and responsive user interfaces with React, while on the back end, I work extensively with Node.js and Spring Boot to develop robust APIs and server-side logic. I am proficient in both MongoDB and MySQL, ensuring efficient data management for a wide range of applications.
+
+Through my recent training in the Digital Technology Product Solution (NZQA Level 5) program at Mission Ready Institute, I have deepened my understanding of agile methodologies, cloud-based architectures, and end-to-end product development. I take a performance-focused, adaptable, and collaborative approach to every project, making me a valuable asset for both front-end and back-end development roles.
+      </h3>
+     
+    </div>
+   
+
+  </div>
+</section>
+
+     
+ 
 
       {/* Contact Me Section */}
-      <div className="flex flex-row w-full mx-auto justify-evenly">
-        <div> </div>
-        <div className="w-1/2">  <ContactMe /> </div>
+      <div className="flex flex-col lg:flex-row w-full justify-evenly mx-auto my-[70px]">
+  {/* Left section: ContactMe */}
+  <div className="w-full lg:w-1/2 flex justify-center">
+    <ContactMe />
+  </div>
+
+  {/* Right section: ScatterText */}
+  <div className="w-full lg:w-1/2 max-w-xl text-[15px] text-justify mt-5 lg:mt-0">
+    <ScatterText />
+  </div>
+</div>
+
       
-      </div>
+      <section className="flex flex-col items-center justify-center mt-10 mb-10">
+        <Footer />
+      </section>
     </div>
   );
 }

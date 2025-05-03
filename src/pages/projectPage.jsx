@@ -32,7 +32,7 @@ export default function Project() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 p-4 items-center justify-center py-[30px] my-24">
+    <div className="flex flex-col gap-4 p-4 items-center justify-center py-[30px] my-[10px]">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
         {cards.map((card, index) => {
           const direction = index % 2 === 0 ? -100 : 100;

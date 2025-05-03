@@ -13,7 +13,7 @@ function Header({ onProjeectClick }) {
                 Projects
               </li>
               <li className="text-[16px] hover:text-gray-400 hover:underline cursor-pointer">Contact</li>
-              <li className="text-[16px] hover:text-gray-400 hover:underline cursor-pointer">About</li>
+              <li className="text-[16px] hover:text-gray-400 hover:underline cursor-pointer">Code</li>
             </ul>
           </div>
         </div>

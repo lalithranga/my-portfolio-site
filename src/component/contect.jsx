@@ -9,7 +9,10 @@ const ContactMe = () => {
   });
 
   const handleChange = (e) => {
+    
     setForm({ ...form, [e.target.name]: e.target.value });
+
+    
   };
 
   const handleSubmit = (e) => {
@@ -18,7 +21,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 border border-black rounded-2xl shadow-lg hover:border-blue-500 transition-colors duration-300 py-[100px]">
+    <div className="max-w-md mx-auto p-6 border border-black rounded-2xl shadow-lg transition-colors duration-300">
       <h2 className="text-2xl font-semibold mb-4 text-center text-white w-fit px-4 py-1 rounded-md mx-auto">
         Contact Me
       </h2>
@@ -58,9 +61,9 @@ const ContactMe = () => {
         />
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white font-semibold py-3 rounded-lg hover:bg-blue-600 transition duration-300"
+          className="w-[100px]  text-white font-semibold py-3 rounded-lg hover:bg-green-200 transition duration-300"
         >
-          Submit
+          Send
         </button>
       </form>
     </div>
