@@ -59,7 +59,7 @@ export default function Project() {
               <h2 className="text-xl font-semibold mb-2 text-white">{card.title}</h2>
             </div>
             <div className="p-4 mt-auto">
-              <p className="text-gray-300 text-justify">{card.desc}</p>
+              <p className="text-gray-300 ">{card.desc}</p>
             </div>
           </motion.div>
           

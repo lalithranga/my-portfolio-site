@@ -125,8 +125,8 @@ function Skill() {
     "w-16 h-16 rounded-lg cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-lg";
 
   return (
-    <div className="font-sans ">
-      <div className="flex flex-col lg:flex-row w-full justify-center lg:mt-[150px] my-[137px] ">
+    <div className="font-sans mx-6 ">
+      <div className="flex flex-col lg:flex-row w-full justify-center lg:mt-[150px] lg:my-[137px] ">
       <div className="max-w-3xl lg:mr-[50px] ">
         {/* Header */}
         <motion.div
