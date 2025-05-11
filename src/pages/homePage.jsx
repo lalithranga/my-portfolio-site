@@ -3,7 +3,7 @@ import Project from "./projectPage";
 import Footer from "../component/footer";
 import Skill from "../component/skill";
 import ContactMe from "../component/contect";
-import ScatterText from "../component/playing";
+
 import "@fontsource/roboto";
 import HomeContent from "./HomeContent";
 import { useRef } from "react";
@@ -38,7 +38,10 @@ function HomePage() {
       </div>
 
       {/* Project Section */}
-      <section ref={projectRef} className="flex items-center justify-center px-4 py-[100px]">
+      <section
+        ref={projectRef}
+        className="flex items-center justify-center px-4 py-[100px]"
+      >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 max-w-6xl w-full">
           <Project />
         </div>
@@ -50,11 +53,13 @@ function HomePage() {
       </section>
 
       {/* Contact Me Section */}
-      <section ref={contactRef} className="flex flex-col lg:flex-row w-full justify-evenly mx-auto my-[70px]">
-        <div className="w-full lg:w-1/2 flex justify-center">
-          <ScatterText />
-        </div>
-        <div className="w-full lg:w-1/2 max-w-xl text-[15px] text-justify mt-5 lg:mt-0">
+      <section
+        ref={contactRef}
+       className="flex flex-col lg:flex-row items-center justify-center px-4 py-[100px] mx-auto max-w-screen-lg  text-center"
+    
+      >
+       
+        <div>
           <ContactMe />
         </div>
       </section>

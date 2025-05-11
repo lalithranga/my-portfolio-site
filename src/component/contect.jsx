@@ -30,9 +30,9 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 border border-black rounded-2xl shadow-lg transition-colors duration-300">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-10 text-center text-white w-fit px-4 py-1 rounded-md mx-auto">
-        Message Me
+    <div className="border border-black rounded-2xl shadow-lg transition-colors duration-300 w-[400px] relative">
+      <h2 className="text-2xl lg:text-2xl font-semibold mb-10 text-white w-fit px-4 py-1 rounded-md mx-auto">
+        Get In Touch
       </h2>
       <form onSubmit={handleSubmit} className="space-y-8">
         <input
@@ -41,7 +41,7 @@ const ContactMe = () => {
           placeholder="Name"
           value={form.name}
           onChange={handleChange}
-          className="w-full p-3 lg:text-[18px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full p-3 lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
           required
         />
         <input
@@ -50,7 +50,7 @@ const ContactMe = () => {
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
-          className="w-full p-3  lg:text-[18px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full p-3  lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
           required
         />
         <input
@@ -59,18 +59,18 @@ const ContactMe = () => {
           placeholder="Phone Number"
           value={form.phone}
           onChange={handleChange}
-          className="w-full p-3 lg:text-[18px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full p-3 lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         <textarea
           name="comment"
           placeholder="Message"
           value={form.comment}
           onChange={handleChange}
-          className="w-full p-3 lg:text-[18px] h-[150px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full p-3 lg:text-[15px] h-[150px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-green-400"
         />
         <button
           type="submit"
-          className="w-[120px]  lg:text-[18px] bg-green-600 lg:w-[150px]  text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-300"
+          className="w-[120px] lg:text-[15px] i bg-green-600 lg:w-[150px]  text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-300 items-start absolute flex justify-center  mx-auto"
         >
           Send Message
         </button>

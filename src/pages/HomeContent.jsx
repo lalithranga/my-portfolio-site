@@ -34,56 +34,63 @@ function HomeContent() {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center">
-        <h1 className="text-[26px] font-bold text-gray-500 lg:text-[50px] my-6 ">Hello, it's me</h1>
-        <p className="text-[30px] lg:text-[40px] mb-2 font-extrabold font-roboto text-gray-200">
+    <div className="max-w-[1280px] mx-auto px-4">
+      <div className="flex flex-col items-center text-center">
+        <h1 className="text-[26px] font-extrabold text-gray-500 lg:text-[40px] lg:my-6">
+          Hello, it's me
+        </h1>
+        <p className="text-[30px] lg:text-[35px] mb-2 font-extrabold font-roboto text-gray-200">
           Lalith Wijesiri
         </p>
 
-        <div className="flex flex-row items-center justify-center w-full mx-auto">
-          <p className="text-[20px] lg:text-[30px] ml-9 w-[80px] lg:w-[100px]">And I'm</p>
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full mx-auto gap-y-3 lg:gap-y-0">
+  <p className="text-[20px] lg:text-[25px] w-full lg:w-[100px] text-center lg:ml-[100px] lg:mr-4">
+    And I'm
+  </p>
 
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={currentTalentIndex}  // Ensure each talent change triggers the animation
-              variants={typingVariants}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              className="text-[30px] lg:text-[40px] font-semibold ml-6 text-green-600 w-[400px]"
-            >
-              {talents[currentTalentIndex].split("").map((char, i) => (
-                <motion.span key={i} variants={letterVariants}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.p>
-          </AnimatePresence>
-        </div>
+  <AnimatePresence mode="wait">
+    <motion.p
+      key={currentTalentIndex}
+      variants={typingVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className="text-[25px] lg:text-[31px] font-semibold text-green-600 w-full lg:w-[400px] text-center lg:text-left"
+    >
+      {talents[currentTalentIndex].split("").map((char, i) => (
+        <motion.span key={i} variants={letterVariants}>
+          {char}
+        </motion.span>
+      ))}
+    </motion.p>
+  </AnimatePresence>
+</div>
+
       </div>
 
       {/* Description */}
       <div className="flex flex-col items-center mb-9 py-5">
         <div className="flex items-center justify-center py-3">
-          <div className="w-full flex flex-col text-gray-400">
+          <div className="w-full flex flex-col text-gray-400 gap-2">
             {[
               "I’m a passionate software developer",
-              "I have a solid background in computer science cgfd fhfh",
-              "Clean code and quality work are key values",
+              "I have a solid background in computer science ",
+              "Clean code and quality work are key values for me",
+              "I’m a team player and love to collaborate",
               "I focus on detail and believe",
               "I’m always learning new",
             ].map((text, idx) => (
-              <div key={idx} className="flex items-center justify-center text-justify">
-                <p className="text-[18px] lg:text-[23px] font-semibold">{text}</p>
+              <div key={idx} className="flex items-center justify-center text-center">
+                <p className="text-[18px] lg:text-[20px] font-semibold px-2">{text}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <section className="flex w-full justify-center items-center mb-6">
-        <div className="flex flex-row justify-evenly w-[400px] lg:w-[600px]">
+      {/* Social Icons */}
+      <section className="flex w-full justify-center items-center mb-6 px-4">
+        <div className="flex flex-wrap justify-center gap- lg:gap-20 w-full max-w-[600px]">
           {[
             {
               href: "https://www.linkedin.com/in/lalith-wijesiri-60a340166",
@@ -118,7 +125,7 @@ function HomeContent() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay }}
-              className={`border-4 border-green-900 rounded-full p-1 text-[30px] text-gray-200 mx-2 ${hover}`}
+              className={`border-4 border-green-900 rounded-full p-2 text-[20px] lg:text-[30px] text-gray-200 ${hover}`}
             >
               {icon}
             </motion.a>
@@ -127,11 +134,11 @@ function HomeContent() {
       </section>
 
       {/* Profile Image */}
-      <section className="flex flex-row w-full mb-6 mt-[50px] justify-center items-center lg:mt-[150px]">
+      <section className="flex flex-col items-center justify-center mt-10 lg:mt-[150px] px-4">
         <motion.img
           src="/profile.jpg"
           alt="Profile"
-          className="w-[350px] h-[350px] rounded-full border-2 border-green-900 object-cover shadow-lg"
+          className="w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full border-2 border-green-900 object-cover shadow-lg"
           animate={{
             scale: [1, 1.05, 1],
             opacity: [0.6, 1, 0.6],

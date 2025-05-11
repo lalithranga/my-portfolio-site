@@ -11,11 +11,16 @@ export default {
       },
       animation: {
         'pulse-border': 'pulse-border 2.5s ease-in-out infinite',
+        'slide-down': 'slide-down 0.3s ease-out forwards',
       },
       keyframes: {
         'pulse-border': {
           '0%, 100%': { opacity: '0.7', transform: 'scale(1)' },
           '50%': { opacity: '1', transform: 'scale(1.1)' },
+        },
+        'slide-down': {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       fontFamily: {

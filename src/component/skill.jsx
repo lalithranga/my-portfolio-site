@@ -136,7 +136,7 @@ function Skill() {
           initial="hidden"
           animate={headerControls}
         >
-          <h1 className="text-2xl lg:text-3xl font-bold text-gray-200 ">
+          <h1 className="text-2xl lg:text-2xl font-bold text-gray-200 ">
             My Tech Toolbox
           </h1>
         </motion.div>
@@ -352,11 +352,11 @@ function Skill() {
           animate={profileControls}
         ></motion.div>
       </div>
-      <div className="w-full max-w-xl text-[15px] text-justify ">
-        <h2 className="text-2xl lg:text-3xl font-bold mb-8  text-gray-200 w-fit rounded-md mx-auto ">
+      <div className="w-full max-w-xl text-justify ">
+        <h2 className="text-2xl lg:text-2xl font-bold mb-8  text-gray-200 w-fit rounded-md mx-auto ">
           My Skills
         </h2>
-        <h3 className="text-gray-200 text-[18px] lg:text-[21px] font-semibold mb-4">
+        <h3 className="text-gray-200 text-[15px] lg:text-[18px] font-semibold mb-4">
           As a Full Stack Developer, I specialize in building high-performance,
           scalable web applications using modern JavaScript technologies and
           Java. My front-end expertise lies in creating dynamic and responsive
