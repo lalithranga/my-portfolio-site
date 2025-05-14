@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Project() {
-  const [activeCard, setActiveCard] = useState(null);
-
   const cards = [
     {
       id: 1,
-      title: 'Chatbot  for Customer Support',
+      title: 'Chatbot for Customer Support',
       desc: 'Used for customer support and engagement.',
       image: '/chatbot.jpeg',
       link: 'https://github.com/lalithranga/ChatbotAPI-M04',
@@ -34,8 +32,6 @@ export default function Project() {
       link: 'https://github.com/lalithranga/Azure-AI-Vehicle-Prediction-Backend',
     },
   ];
-  
-  
 
   return (
     <div className="flex flex-col gap-4 p-4 items-center justify-center py-[30px] my-[10px]">
@@ -45,43 +41,37 @@ export default function Project() {
 
           return (
             <motion.div
-  key={card.id}
-  onClick={() => setActiveCard(card.id)}
-  initial={{ x: direction, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{ duration: 0.9, delay: index * 0.1 }}
-  exit={{ x: direction, opacity: 0 }}
-  className={`flex flex-col bg-gray-900 rounded-2xl shadow-md overflow-hidden cursor-pointer transition-all duration-300 
-    hover:ring-4 hover:ring-green-600 hover:opacity-30 
-    md:bg-opacity-50 md:translate-x-0`}
->
-  <img
-    src={card.image}
-    alt={`${card.title} Image`}
-    className="w-full h-[230px] object-cover rounded-t-2xl transition-transform duration-300 transform hover:scale-105 my-3"
-  />
-  
-  {/* Spacer to push bottom content down */}
-  <div className="flex-grow" />
+              key={card.id}
+              initial={{ x: direction, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.9, delay: index * 0.1 }}
+              className="relative group flex flex-col bg-gray-900 rounded-2xl shadow-md overflow-hidden cursor-pointer transition-all duration-300 hover:ring-4 hover:ring-green-600"
+            >
+              <img
+                src={card.image}
+                alt={`${card.title} Image`}
+                className="w-full h-[230px] object-cover rounded-t-2xl transition-transform duration-300 transform group-hover:scale-105 my-3"
+              />
 
-  {/* Content fixed at bottom */}
-  <div className="p-4">
-    <h2 className="text-xl font-semibold mb-2 text-white">{card.title}</h2>
-    <p className="text-gray-300 mb-4">{card.desc}</p>
-    <a
-      href={card.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block text-green-200 underline hover:text-green-700 transition-colors"
-    >
-      View Code
-    </a>
-  </div>
-</motion.div>
+              {/* Overlay on hover */}
+              <div className="absolute top-0 left-0 w-full h-full bg-gray-500 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center px-4 text-center">
+                <p className="text-white text-[15px] font-semibold">{card.desc}</p>
+              </div>
 
-
-          
+              {/* Content section at bottom */}
+              <div className="p-4 mt-auto z-10">
+                <h2 className="text-xl font-semibold mb-2 text-white">{card.title}</h2>
+                <a
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-green-200 underline hover:text-green-700 transition-colors"
+                >
+                  View Code
+                </a>
+              </div>
+            </motion.div>
           );
         })}
       </div>
