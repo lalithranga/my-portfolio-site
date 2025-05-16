@@ -33,14 +33,15 @@ function MobileMenu({ onProjectClick, onSkillClick, onContactClick, closeMenu })
         >
           Skills
         </li>
-        <a
-          href="https://github.com/lalithranga/my-portfolio-site"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={closeMenu}
+        <li
+          className="hover:text-green-400 cursor-pointer"
+          onClick={() => {
+            onContactClick();
+            closeMenu();
+          }}
         >
-          <li className="hover:text-green-400 cursor-pointer">Code</li>
-        </a>
+          Contact
+        </li>
       </ul>
     </div>
   );

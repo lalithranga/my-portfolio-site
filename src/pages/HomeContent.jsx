@@ -90,7 +90,7 @@ function HomeContent() {
 
       {/* Social Icons */}
       <section className="flex w-full justify-center items-center mb-6 px-4">
-        <div className="flex flex-wrap justify-center gap- lg:gap-20 w-full max-w-[600px]">
+        <div className="flex flex-wrap justify-center gap-10 lg:gap-20 w-full max-w-[600px]">
           {[
             {
               href: "https://www.linkedin.com/in/lalith-wijesiri-60a340166",

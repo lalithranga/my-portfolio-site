@@ -19,7 +19,7 @@ export default function Project() {
     },
     {
       id: 3,
-      title: 'MongoDB Project',
+      title: 'MongoDB Project CRUD CLI',
       desc: 'Mongo DB crud operations and CLI commands. Used for data storage and retrieval.',
       image: '/mongo.png',
       link: 'https://github.com/lalithranga/Mongo_DB_CLI_And_CRUD',
@@ -35,7 +35,7 @@ export default function Project() {
 
   return (
     <div className="flex flex-col gap-4 p-4 items-center justify-center py-[30px] my-[10px]">
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
         {cards.map((card, index) => {
           const direction = index % 2 === 0 ? -100 : 100;
 
@@ -61,7 +61,7 @@ export default function Project() {
 
               {/* Content section at bottom */}
               <div className="p-4 mt-auto z-10">
-                <h2 className="text-xl font-semibold mb-2 text-white">{card.title}</h2>
+                <h2 className="text-sm lg:text-lg font-semibold mb-2 text-white">{card.title}</h2>
                 <a
                   href={card.link}
                   target="_blank"

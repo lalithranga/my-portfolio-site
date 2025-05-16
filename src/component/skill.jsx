@@ -126,7 +126,8 @@ function Skill() {
 
   return (
     <div className="font-sans mx-6 ">
-      <div className="flex flex-col lg:flex-row w-full justify-center lg:mt-[150px] lg:my-[137px] ">
+     <div className="flex flex-col md:flex-row w-full justify-center items-center md:items-start lg:my-[137px]">
+
       <div className="max-w-3xl lg:mr-[50px] ">
         {/* Header */}
         <motion.div
@@ -151,7 +152,7 @@ function Skill() {
         >
           <motion.h2
             variants={titleVariants}
-            className="text-lg lg:text-xl font-semibold text-gray-200 mb-4 "
+            className="text-sm lg:text-xl font-semibold text-gray-200 mb-4 "
           >
             Frontend
           </motion.h2>

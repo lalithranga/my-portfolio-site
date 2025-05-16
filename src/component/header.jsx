@@ -23,7 +23,6 @@ function Header({ onProjectClick, onSkillClick, onContactClick }) {
         </div>
 
         {/* Desktop Nav */}
-
         <div className="hidden md:flex items-center justify-center flex-1 relative w-full">
           <div>
             <ul className="flex flex-row gap-16 lg:gap-24 xl:gap-32 mt-4 text-[16px] lg:text-[20px]">
@@ -48,10 +47,9 @@ function Header({ onProjectClick, onSkillClick, onContactClick }) {
               >
                 Contact
               </li>
-            </ul>{" "}
+            </ul>
           </div>
           <div className="absolute flex flex-row items-center justify-center right-1 text-[14px] md:text-[15px] lg:text-[16px] gap-8 mt-4 cursor-pointer">
-
             {/* GitHub Icon in a circle */}
             <a
               href="https://github.com/lalithranga/my-portfolio-site"
@@ -63,13 +61,19 @@ function Header({ onProjectClick, onSkillClick, onContactClick }) {
             </a>
 
             {/* Address Book Icon in a circle */}
-            <div className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 hover:text-blue-500 hover:underline hover:border-blue-500 transition-all">
-              <PiAddressBookLight size={22} />
-            </div>
+           
+
+            {/* CV Download Button */}
+            <a
+              href="/cv.pdf"
+              download
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 hover:text-blue-500 hover:underline hover:border-blue-500 transition-all"
+              title="Download CV"
+            >
+              <span className="text-sm font-semibold">CV</span>
+            </a>
           </div>
         </div>
-
-        {/* Resume Link */}
       </div>
 
       {/* Mobile Menu Dropdown */}
