@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MobileMenu from "./headerMobile";
 import { TbBrandGithub } from "react-icons/tb";
-import { PiAddressBookLight } from "react-icons/pi";
+
 
 function Header({ onProjectClick, onSkillClick, onContactClick }) {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 
 function MobileMenu({ onProjectClick, onSkillClick, onContactClick, closeMenu }) {
-  // Step 2: auto-close menu on scroll
   useEffect(() => {
     const handleScroll = () => closeMenu();
     window.addEventListener("scroll", handleScroll);
@@ -43,6 +42,26 @@ function MobileMenu({ onProjectClick, onSkillClick, onContactClick, closeMenu })
           Contact
         </li>
       </ul>
+
+      {/* Code & Resume Links */}
+      <div className="mt-6 flex justify-center gap-6 text-sm">
+        <a
+          href="https://github.com/lalithranga/my-portfolio-site"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 rounded-full border border-gray-400 hover:text-blue-400 hover:border-blue-400 transition-all"
+        >
+          Code
+        </a>
+
+        <a
+          href="/cv.pdf"
+          download
+          className="px-4 py-2 rounded-full border border-gray-400 hover:text-blue-400 hover:border-blue-400 transition-all"
+        >
+          Resume
+        </a>
+      </div>
     </div>
   );
 }

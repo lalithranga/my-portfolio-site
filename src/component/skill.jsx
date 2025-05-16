@@ -159,7 +159,7 @@ function Skill() {
           <div className="flex flex-wrap gap-3">
             <motion.img
               variants={itemVariants}
-              src="/Js.svg"
+              src="/js.svg"
               alt="JavaScript"
               title="JavaScript"
               className={iconStyle}
@@ -219,7 +219,7 @@ function Skill() {
           <div className="flex flex-wrap gap-3">
             <motion.img
               variants={itemVariants}
-              src="/nodejs.svg"
+              src="/node.svg"
               alt="Node.js"
               title="Node.js"
               className={iconStyle}
