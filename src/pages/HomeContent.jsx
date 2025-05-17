@@ -81,7 +81,7 @@ function HomeContent() {
               "I’m always learning new",
             ].map((text, idx) => (
               <div key={idx} className="flex items-center justify-center text-center">
-                <p className="text-[18px] lg:text-[20px] font-semibold px-2">{text}</p>
+                <p className="text-[16px] lg:text-[20px] font-semibold px-2">{text}</p>
               </div>
             ))}
           </div>
