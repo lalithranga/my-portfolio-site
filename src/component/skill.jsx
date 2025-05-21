@@ -137,7 +137,7 @@ function Skill() {
           initial="hidden"
           animate={headerControls}
         >
-          <h1 className="text-[19px] lg:text-2xl font-bold text-gray-200 ">
+          <h1 className="text-[19px] lg:text-2xl font-bold text-gray-200 items-center justify-center ">
             My Tech Toolbox
           </h1>
         </motion.div>
