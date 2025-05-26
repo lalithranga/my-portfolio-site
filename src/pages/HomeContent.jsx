@@ -34,7 +34,7 @@ function HomeContent() {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4 md:my-24 lg:my-20 mt-14 ">
+    <div className="max-w-[1280px] mx-auto px-4 md:my-24 lg:my-20 mt-[60px] ">
       <div className="flex flex-col items-center text-center">
         <h1 className="text-[26px] font-extrabold text-gray-500 lg:text-[40px] lg:my-6">
           Hello, it's me

@@ -61,7 +61,7 @@ function HomePage() {
       <section
         id="projects"
         ref={projectRef}
-        className={`min-h-screen md:min-h-fit md:pt-4 mb-28 px-4 flex items-center justify-center ${SCROLL_MARGIN_TOP}`}
+        className={`min-h-screen md:min-h-fit md:pt-4 mb-28 px-4 flex items-center justify-center mt-8 md:mt-12 ${SCROLL_MARGIN_TOP}`}
       >
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 max-w-6xl w-full">
           <Project />
