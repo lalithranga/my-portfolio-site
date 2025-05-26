@@ -29,66 +29,77 @@ const ContactMe = () => {
     }
   };
 
-  return (
-    <>
-      <Toaster position="top-right" reverseOrder={false} />
+ return (
+  <>
+    <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="w-full px-4 flex justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border border-black rounded-2xl shadow-lg transition-colors duration-300 w-[400px] relative"
-        >
-          <h2 className="text-[19px] lg:text-2xl font-semibold mb-10 text-white w-fit px-4 py-1 rounded-md mx-auto">
-            Get In Touch
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full p-3 text-[15px] lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full p-3 text-[15px] lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={handleChange}
-              className="w-full p-3 text-[15px] lg:text-[15px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
-            <textarea
-              name="comment"
-              placeholder="Message"
-              value={form.comment}
-              onChange={handleChange}
-              className="w-full p-3 lg:text-[15px] text-[15px]  h-[150px] bg-transparent text-white placeholder-gray-300 border border-white rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-green-400"
-            />
-            <button
-              type="submit"
-              className="w-[120px] text-[16px]  lg:text-[15px] bg-green-600 lg:w-[150px] text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-300 items-start absolute flex justify-center mx-auto"
-            >
-              Send Message
-            </button>
-          </form>
-        </motion.div>
+    <div className="flex flex-col items-center justify-center gap-10 px-4 w-full">
+      {/* Section Header */}
+      <div className="text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#54ebc3] to-green-600 bg-clip-text text-transparent mb-4">
+          Get In Touch
+        </h1>
+        
+        <p className="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed py-8">
+          I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          <p className="text-green-400 font-medium text-center"> Let's create something amazing together!</p>
+        </p>
       </div>
-    </>
-  );
+
+      {/* Form */}
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="border border-black rounded-2xl shadow-lg transition-colors duration-300 w-[400px] relative"
+      >
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={form.name}
+            onChange={handleChange}
+            className="w-full p-4 text-base bg-transparent text-white placeholder-gray-400 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 transition-all duration-300 hover:border-gray-300"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full p-4 text-base bg-transparent text-white placeholder-gray-400 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 transition-all duration-300 hover:border-gray-300"
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+            className="w-full p-4 text-base bg-transparent text-white placeholder-gray-400 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 transition-all duration-300 hover:border-gray-300"
+          />
+          <textarea
+            name="comment"
+            placeholder="Message"
+            value={form.comment}
+            onChange={handleChange}
+            className="w-full p-4 text-base bg-transparent text-white placeholder-gray-400 border border-white rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 transition-all duration-300 hover:border-gray-300 h-[150px]"
+          />
+          <button
+            type="submit"
+            className="w-[120px] text-[16px] lg:text-[15px] bg-green-600 lg:w-[150px] text-white font-semibold py-3 rounded-lg hover:bg-green-800 transition duration-300 flex justify-center mx-auto"
+          >
+            Send Message
+          </button>
+        </form>
+      </motion.div>
+    </div>
+  </>
+);
+
 };
 
 export default ContactMe;

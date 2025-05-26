@@ -34,7 +34,7 @@ function HomeContent() {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto px-4">
+    <div className="max-w-[1280px] mx-auto px-4 md:my-24 lg:my-20 mt-14 ">
       <div className="flex flex-col items-center text-center">
         <h1 className="text-[26px] font-extrabold text-gray-500 lg:text-[40px] lg:my-6">
           Hello, it's me
@@ -49,14 +49,15 @@ function HomeContent() {
   </p>
 
   <AnimatePresence mode="wait">
-    <motion.p
-      key={currentTalentIndex}
-      variants={typingVariants}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-      className="text-[25px] lg:text-[31px] font-semibold text-green-600 w-full lg:w-[400px] text-center lg:text-left"
-    >
+   <motion.p
+  key={currentTalentIndex}
+  variants={typingVariants}
+  initial="hidden"
+  animate="visible"
+  exit="hidden"
+  className="text-[25px] lg:text-[31px] font-semibold w-full lg:w-[400px] text-center lg:text-left
+             bg-gradient-to-r from-[#54ebc3] to-[#36c8f4] bg-clip-text text-transparent"
+>
       {talents[currentTalentIndex].split("").map((char, i) => (
         <motion.span key={i} variants={letterVariants}>
           {char}
