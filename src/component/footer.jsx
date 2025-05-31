@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <p className="text-muted text-gray-400 text-[15px] lg:text-lg">© 2025 | Powered by Lalith Wijesiri</p>
+        <p className="text-muted text-gray-400 text-[15px] lg:text-lg my-6">© 2025 | Powered by Lalith Wijesiri</p>
 
 
 
